@@ -1,0 +1,7 @@
+---
+# defaults file for druid
+druid_version: '0.12.2'
+druid_mirror: http://static.druid.io/artifacts/releases
+druid_install_parent_dir: /usr/local
+druid_checksums:
+  '0.12.2': sha256:951fffe2026cb2c7e219add5f4be15c993f34347f8af0873d19c72ccbb606f77

@@ -1,0 +1,9 @@
+---
+# vars file for druid
+druid_name: druid-{{druid_version}}
+druid_tgz: '{{druid_name}}-bin.tar.gz'
+druid_tgz_url: '{{druid_mirror}}/{{druid_tgz}}'
+druid_checksum: '{{druid_checksums[druid_version]}}'
+
+druid_install_dir: '{{druid_install_parent_dir}}/{{druid_name}}'
+druid_link_dir: '{{druid_install_parent_dir}}/druid'

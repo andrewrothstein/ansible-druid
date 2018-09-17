@@ -1,0 +1,50 @@
+---
+- name: check for druid installation
+  become: yes
+  become_user: root
+  stat:
+    path: '{{druid_install_dir}}'
+  changed_when: False
+  register: druid_binary
+- when: not druid_binary.stat.exists
+  block:
+    - name: download archive
+      become: yes
+      become_user: root
+      get_url:
+        url: '{{druid_tgz_url}}'
+        dest: /tmp/{{druid_tgz}}
+        checksum: '{{druid_checksum}}'
+        mode: 0644
+    - name: unarchive...
+      become: yes
+      become_user: root
+      unarchive:
+        remote_src: yes
+        src: /tmp/{{druid_tgz}}
+        dest: '{{druid_install_parent_dir}}'
+        creates: '{{druid_install_dir}}'
+  always:
+    - name: cleanup
+      become: yes
+      become_user: root
+      file:
+        path: /tmp/{{druid_tgz}}
+        state: absent
+- name: link
+  become: yes
+  become_user: root
+  file:
+    src: '{{druid_install_dir}}'
+    dest: '{{druid_link_dir}}'
+    state: link
+- name: include druid in the default sh path...
+  become: yes
+  become_user: root
+  with_items:
+    - f: druid.sh
+      d: /etc/profile.d
+  template:
+    src: '{{item.f}}.j2'
+    dest: '{{item.d}}/{{item.f}}'
+    mode: '{{item.m|default("0644")}}'
