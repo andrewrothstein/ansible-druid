@@ -2,7 +2,7 @@ andrewrothstein.druid
 =========
 [![Build Status](https://travis-ci.org/andrewrothstein/ansible-druid.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-druid)
 
-A brief description of the andrewrothstein.druid goes here.
+Installs [Druid](http://http://druid.io/)
 
 Requirements
 ------------
