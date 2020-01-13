@@ -1,7 +1,20 @@
 ---
 # defaults file for druid
-druid_version: '0.12.2'
-druid_mirror: http://static.druid.io/artifacts/releases
+druid_version: '0.16.1-incubating'
+druid_mirror: https://archive.apache.org/dist/incubator/druid
 druid_install_parent_dir: /usr/local
 druid_checksums:
-  '0.12.2': sha256:951fffe2026cb2c7e219add5f4be15c993f34347f8af0873d19c72ccbb606f77
+  # https://archive.apache.org/dist/incubator/druid/0.13.0-incubating/apache-druid-0.13.0-incubating-bin.tar.gz.sha512
+  '0.13.0-incubating': sha512:732ad5136ecf129684eb93169f35d6e31dd52cf75b139bc1a068fa39e8c91de442ac1826cd120ecc4ebdf9aafb6bc75bf3e3f7a782c934fed93b8f3733da1f61
+  # https://archive.apache.org/dist/incubator/druid/0.14.0-incubating/apache-druid-0.14.0-incubating-bin.tar.gz.sha512
+  '0.14.0-incubating': sha512:60029af3688f30c06501eea3b2540c6728aeec681fbc279734c983bb775cd925026aa7577330d2dde78e49386e274e9c36b09714e1a0a41d85737541c29ee093
+  # https://archive.apache.org/dist/incubator/druid/0.14.1-incubating/apache-druid-0.14.1-incubating-bin.tar.gz.sha512
+  '0.14.1-incubating': sha512:e473d122957a40d4579dd3835732b776148a85ed6951253550df2adff87415c4e62f86d460181929fddf10e3892e2ed81f0914d452be90fc8d69ea624e49eb08
+  # https://archive.apache.org/dist/incubator/druid/0.15.0-incubating/apache-druid-0.15.0-incubating-bin.tar.gz.sha512
+  '0.15.0-incubating': sha512:3cba5765833ca0eec42de200f147d689a5cfb88bc3c3df8113c7f684e91f41e0ae2177a53a90e728117601f1f4cba94a766294e60ec519a1885838c0e5ab4890
+  # https://archive.apache.org/dist/incubator/druid/0.15.1-incubating/apache-druid-0.15.1-incubating-bin.tar.gz.sha512
+  '0.15.1-incubating': sha512:b4cf7588fa1559cbc912ea42be98cb8c1bcd24512929576c78d32b263a0bf3349296982f485a3edb76616566358a884ea6e8f7f8584c899d9ea0fbc464ac62ab
+  # https://archive.apache.org/dist/incubator/druid/0.16.0-incubating/apache-druid-0.16.0-incubating-bin.tar.gz.sha512
+  '0.16.0-incubating': sha512:0c4b71f077e28d2f4d3bc3f072543374570b98ec6a1918a5e1828e1da7e3871b5efb04070a8bcdbc172a817e43254640ce28a99757984be7d8dd3d607f1d870e
+  # https://archive.apache.org/dist/incubator/druid/0.16.1-incubating/apache-druid-0.16.1-incubating-bin.tar.gz.sha512
+  '0.16.1-incubating': sha512:f637453dfbdec4b22384e9bf8ebe93ccf17898e8f0ebc45312ca71aa7e3722dc79f558e6792fd67619d3c3abc219487777e08e2fd8fe63d4c108a01330961fca
