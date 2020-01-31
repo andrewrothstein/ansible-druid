@@ -1,9 +1,10 @@
 ---
 # vars file for druid
-druid_name: apache-druid-{{ druid_version }}
+druid_ver_str: '{{ druid_ver }}{% if druid_incubating %}-incubating{% endif %}'
+druid_name: apache-druid-{{ druid_ver_str }}
 druid_tgz: '{{ druid_name }}-bin.tar.gz'
-druid_tgz_url: '{{ druid_mirror }}/{{ druid_version }}/{{ druid_tgz }}'
-druid_checksum: '{{ druid_checksums[druid_version] }}'
+druid_tgz_url: '{{ druid_mirror }}{% if druid_incubating %}/incubator{% endif %}/druid/{{ druid_ver_str }}/{{ druid_tgz }}'
+druid_checksum: '{{ druid_checksums[druid_ver] }}'
 
 druid_install_dir: '{{ druid_install_parent_dir }}/{{ druid_name }}'
 druid_link_dir: '{{ druid_install_parent_dir }}/druid'
