@@ -1,6 +1,6 @@
 ---
 # defaults file for druid
-druid_ver: '0.17.0'
+druid_ver: 0.21.0
 druid_incubating: no
 
 druid_mirror: https://archive.apache.org/dist
@@ -23,3 +23,5 @@ druid_checksums:
   '0.16.1': sha512:f637453dfbdec4b22384e9bf8ebe93ccf17898e8f0ebc45312ca71aa7e3722dc79f558e6792fd67619d3c3abc219487777e08e2fd8fe63d4c108a01330961fca
   # https://www.apache.org/dist/druid/0.17.0/apache-druid-0.17.0-bin.tar.gz.sha512
   '0.17.0': sha512:0a4054c73a965d1c7bac390e147f2733d7aa2de6632400e205c879410d5c1588d9eaa4af742c762295b7b0c462d8e67a58c52c0e16c4a81243eea02959a03732
+  # https://www.apache.org/dist/druid/0.21.0/apache-druid-0.21.0-bin.tar.gz.sha512
+  '0.21.0': sha512:4c1b9ff4c8d89e1c78f0bc9e414ea4e855a637925959b5e4e4edd79bdbd0311f0b09cc332c6f48f982f10d9d46d2658cee802bac4e60116598d1aaf3deebf9b1
