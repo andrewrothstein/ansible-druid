@@ -1,9 +1,9 @@
 dependencies:
 - openjdk_app: jre
   role: andrewrothstein.openjdk
-  version: v2.0.4
+  version: v2.0.15
 - role: andrewrothstein.unarchive-deps
-  version: v1.1.2
+  version: v1.2.0
 galaxy_info:
   author: Andrew Rothstein
   company: BlueMountain Capital
@@ -14,23 +14,22 @@ galaxy_info:
   - MIT
   min_ansible_version: 2.0
   platforms:
-  - name: EL
-    versions:
-    - all
-  - name: Fedora
-    versions:
-    - all
-  - name: Ubuntu
-    versions:
-    - all
-  - name: Alpine
-    versions:
-    - all
   - name: Archlinux
     versions:
     - all
   - name: Debian
     versions:
-    - jessie
-    - stretch
+    - bullseye
+    - buster
+  - name: EL
+    versions:
+    - 8
+  - name: Fedora
+    versions:
+    - 34
+    - 35
+  - name: Ubuntu
+    versions:
+    - bionic
+    - focal
   role_name: druid
