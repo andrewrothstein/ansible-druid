@@ -1,5 +1,5 @@
 ---
-- name: check for druid installation
+- name: check for druid installation in {{ druid_install_dir }}
   become: yes
   become_user: root
   stat:
@@ -8,30 +8,30 @@
   register: druid_binary
 - when: not druid_binary.stat.exists
   block:
-    - name: download archive
+    - name: downloading {{ druid_tgz_url }}
       become: yes
       become_user: root
       get_url:
         url: '{{ druid_tgz_url }}'
-        dest: /tmp/{{ druid_tgz }}
+        dest: '{{ druid_tmp_tgz }}'
         checksum: '{{ druid_checksum }}'
         mode: 0644
-    - name: unarchive...
+    - name: unarchive {{ druid_tmp_tgz }} to {{ druid_install_parent_dir }}
       become: yes
       become_user: root
       unarchive:
         remote_src: yes
-        src: /tmp/{{ druid_tgz }}
+        src: '{{ druid_tmp_tgz }}'
         dest: '{{ druid_install_parent_dir }}'
         creates: '{{ druid_install_dir }}'
   always:
-    - name: cleanup
+    - name: rm {{ druid_tmp_tgz }}
       become: yes
       become_user: root
       file:
-        path: /tmp/{{ druid_tgz }}
+        path: '{{ druid_tmp_tgz }}'
         state: absent
-- name: link
+- name: linking {{ druid_link_dir }} to {{ druid_install_dir }}
   become: yes
   become_user: root
   file:
