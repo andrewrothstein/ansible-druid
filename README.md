@@ -1,6 +1,6 @@
 andrewrothstein.druid
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-druid.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-druid)
+![Build Status](https://github.com/andrewrothstein/ansible-druid/actions/workflows/build.yml/badge.svg)
 
 Installs [Druid](http://http://druid.io/)
 

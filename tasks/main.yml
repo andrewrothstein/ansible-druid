@@ -1,15 +1,21 @@
 ---
+- include_role:
+    name: andrewrothstein.unarchive-deps
+- include_role:
+    name: andrewrothstein.temurin
+  vars:
+    openjdk_app: jre
 - name: check for druid installation in {{ druid_install_dir }}
-  become: yes
+  become: true
   become_user: root
   stat:
     path: '{{ druid_install_dir }}'
-  changed_when: False
+  changed_when: false
   register: druid_binary
 - when: not druid_binary.stat.exists
   block:
     - name: downloading {{ druid_tgz_url }}
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ druid_tgz_url }}'
@@ -17,29 +23,29 @@
         checksum: '{{ druid_checksum }}'
         mode: 0644
     - name: unarchive {{ druid_tmp_tgz }} to {{ druid_install_parent_dir }}
-      become: yes
+      become: true
       become_user: root
       unarchive:
-        remote_src: yes
+        remote_src: true
         src: '{{ druid_tmp_tgz }}'
         dest: '{{ druid_install_parent_dir }}'
         creates: '{{ druid_install_dir }}'
   always:
     - name: rm {{ druid_tmp_tgz }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ druid_tmp_tgz }}'
         state: absent
 - name: linking {{ druid_link_dir }} to {{ druid_install_dir }}
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ druid_install_dir }}'
     dest: '{{ druid_link_dir }}'
     state: link
 - name: include druid in the default sh path...
-  become: yes
+  become: true
   become_user: root
   with_items:
     - f: druid.sh
