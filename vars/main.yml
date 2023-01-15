@@ -3,7 +3,7 @@
 druid_name: apache-druid-{{ druid_ver }}
 druid_tgz: '{{ druid_name }}-bin.tar.gz'
 druid_tmp_tgz: /tmp/{{ druid_tgz }}
-druid_tgz_url: '{{ druid_mirror }}{% if druid_incubating %}/incubator{% endif %}/druid/{{ druid_ver }}/{{ druid_tgz }}'
+druid_tgz_url: '{{ druid_mirror }}/druid/{{ druid_ver }}/{{ druid_tgz }}'
 druid_checksum: '{{ druid_checksums[druid_ver] }}'
 
 druid_install_dir: '{{ druid_install_parent_dir }}/{{ druid_name }}'
