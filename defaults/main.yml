@@ -1,6 +1,6 @@
 ---
 # defaults file for druid
-druid_ver: 25.0.0
+druid_ver: 27.0.0
 
 druid_mirror: https://archive.apache.org/dist
 
@@ -8,3 +8,7 @@ druid_install_parent_dir: /usr/local
 druid_checksums:
   # https://www.apache.org/dist/druid/25.0.0/apache-druid-25.0.0-bin.tar.gz.sha512
   '25.0.0': sha512:16f917c1c12c8edf85cefd4ad2fb68bf74cdbbb83e791e15fd13e74af18f3fbfddcdfbae8ab3834dba71cd8d45c6fe3920fbe3c75b0e5d050f040332c8ce54b7
+  # https://www.apache.org/dist/druid/26.0.0/apache-druid-26.0.0-bin.tar.gz.sha512
+  '26.0.0': sha512:b8d2c982c8fcc0abadecb571727a3e8f69a6f79ee315fbe96111128c3cffc7f92df7437d17b80c0e5234222bb55b265591d19081cbdcda0ab37563805fecf3e4
+  # https://www.apache.org/dist/druid/27.0.0/apache-druid-27.0.0-bin.tar.gz.sha512
+  '27.0.0': sha512:b840ed0d77b1e5c11e058b161a56a469b0916febc1d478bf7ad2517cf79d2b724ece5cef21d96581122ba0958a5737f41e76496db3b10db5bfb4ab3123e4091b
