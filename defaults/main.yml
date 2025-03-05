@@ -1,6 +1,6 @@
 ---
 # defaults file for druid
-druid_ver: 30.0.0
+druid_ver: 32.0.0
 
 druid_mirror: https://archive.apache.org/dist
 
@@ -16,3 +16,11 @@ druid_checksums:
   '29.0.1': sha512:5e8dfea56e33bf4c1f2e82fa4a8478a3fdfb9205cd88e3f2fc58beaf90f2493fe6a0b42b15bac6666c11e97809da2e439008fcf84d8998c0dea689055c00e98b
   # https://www.apache.org/dist/druid/30.0.0/apache-druid-30.0.0-bin.tar.gz.sha512
   '30.0.0': sha512:fe50f134e4c2bba2bf04e0f5ddba1886af1c7ed8a6b4e361347efc853ef50aba8e35b664af0531cdabce69c6063fff0913d2165ae160614730912698f35aee83
+  # https://www.apache.org/dist/druid/30.0.1/apache-druid-30.0.1-bin.tar.gz.sha512
+  '30.0.1': sha512:e2d3a1ac50ca235f2e32c3cf154d07533be5676891f456cd4a1541a8937b1a09b4e51dbb25f5dc537ff737f72b742f4278e5aaa17b178c93e2f02e056c7b1548
+  # https://www.apache.org/dist/druid/31.0.0/apache-druid-31.0.0-bin.tar.gz.sha512
+  '31.0.0': sha512:831448a78a2d4a1872506636c4fd4d24ba0d618f02ba148bd99a2afc2fcb7f8d41fde4b9c93dbb4d117c5783313989f641bc91b63db71737645bfc94c0ec3f73
+  # https://www.apache.org/dist/druid/31.0.1/apache-druid-31.0.1-bin.tar.gz.sha512
+  '31.0.1': sha512:df7aee79f2ab490367e0bac209e269bcbaa3df39471605bb1f53e5ba5227277d21b6c6566ddfb3b0b253f145975960612f3c8e72e93d286a0d5549258bc384ac
+  # https://www.apache.org/dist/druid/32.0.0/apache-druid-32.0.0-bin.tar.gz.sha512
+  '32.0.0': sha512:171f80facaefaaa6c0e91f972d486582894b882e7e0c2c742b0621eea197e52177243d0a358144961cba93f5363565b559c3d908bc7e285652ca620d7ebef916
